@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Task 1</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <script>
+        var array = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
+        function filter_num() {
+            var even = []; 
+            var odd = [];  
+
+            for (var i = 0; i < array.length; i++) { 
+                if (array[i] % 2 == 0) {
+                    even.push(array[i]);
+                } else {
+                    odd.push(array[i]); 
+                }
+            }
+             return { even, odd };
+        }
+        function display() {
+            var result = filter_num();
+            var even = result.even; 
+            var odd = result.odd;  
+            console.log("Total Array: " + array.join(', '));
+            console.log("Even Numbers: " + even.join(', ')); 
+            console.log("Odd Numbers: " + odd.join(', '));    
+        }
+        console.log("Home Task 1");
+        console.log("Even Number or Odd Number ");
+        display();
+    </script>
+</body>
+</html>

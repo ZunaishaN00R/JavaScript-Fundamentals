@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Task 2</title>
+</head>
+<body>
+    <h1>Even Numbers 1 - 20</h1>
+    <script>
+        var array = [];
+        for (let i = 0; i <= 20; i += 1) {
+            array.push(i); 
+        }
+        function filter_num(arr) {
+            var even = [];
+            var odd = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 == 0) {
+                    even.push(arr[i]);
+                } else {
+                    odd.push(arr[i]);
+                }
+            }
+            return { even, odd };
+        }
+        function display() {
+            var result = filter_num(array);
+            var even = result.even;
+            var odd = result.odd;
+            console.log("Total Array: " + array.join(', '));
+            console.log("Even Numbers: " + even.join(', '));
+            console.log("Odd Numbers: " + odd.join(', '));
+        }
+        console.log("Home Task 2");
+        console.log("Even Number between 1 to 20");
+        display();
+    </script>
+</body>
+</html>
